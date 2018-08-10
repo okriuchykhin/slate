@@ -244,6 +244,23 @@
               </ul>
           </li>
           <li>
+            <a href="#inventories" class="toc-h1 toc-link" data-title="Inventories">Inventories</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-inventories-from-the-specific-team" class="toc-h2 toc-link" data-title="Get All Inventories from the specific team">Get All Inventories from the specific team</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-inventory" class="toc-h2 toc-link" data-title="Get a Specific Inventory">Get a Specific Inventory</a>
+                  </li>
+                  <li>
+                    <a href="#get-columns-from-specific-inventory" class="toc-h2 toc-link" data-title="Get Columns from specific inventory">Get Columns from specific inventory</a>
+                  </li>
+                  <li>
+                    <a href="#get-items-from-specific-inventory" class="toc-h2 toc-link" data-title="Get Items from specific inventory">Get Items from specific inventory</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -307,7 +324,7 @@ You must replace <code>qwerty123456...</code> with your API access token.
 <td>Number of items returned per page.</td>
 </tr>
 </tbody></table>
-<h1 id='teams'>Teams</h1><h2 id='get-all-teams'>Get All Teams</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams"</span>
+<h1 id='teams'>Teams</h1><h2 id='get-all-teams'>Get All Teams</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://my-test.scinote.net/api/v1/teams"</span>
   -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
 </code></pre>
 <blockquote>
@@ -335,18 +352,18 @@ You must replace <code>qwerty123456...</code> with your API access token.
         </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all teams user is member of.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://my-test.scinote.net/api/v1/teams</code></p>
-<h2 id='get-a-specific-team'>Get a Specific Team</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams/1"</span>
+<p><code>GET https://my-test.scinote.net/api/v1/teams</code></p>
+<h2 id='get-a-specific-team'>Get a Specific Team</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://my-test.scinote.net/api/v1/teams/1"</span>
   -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
 </code></pre>
 <blockquote>
@@ -366,7 +383,7 @@ You must replace <code>qwerty123456...</code> with your API access token.
 </span></code></pre>
 <p>This endpoint retrieves a specific team.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://my-test.scinote.net/api/v1/teams/&lt;ID&gt;</code></p>
+<p><code>GET https://my-test.scinote.net/api/v1/teams/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -377,6 +394,285 @@ You must replace <code>qwerty123456...</code> with your API access token.
 <tr>
 <td>ID</td>
 <td>The ID of the team to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='inventories'>Inventories</h1><h2 id='get-all-inventories-from-the-specific-team'>Get All Inventories from the specific team</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams/1/inventories"</span>
+  -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventories"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inventory 1"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventories"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inventory 2"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all inventories from the specified team.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://my-test.scinote.net/api/v1/teams/&lt;TEAM_ID&gt;/inventories</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TEAM_ID</td>
+<td>The ID of the team to retrieve inventories from</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-inventory'>Get a Specific Inventory</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams/1/inventories/1"</span>
+  -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventories"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inventory 1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific inventory.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://my-test.scinote.net/api/v1/teams/&lt;TEAM_ID&gt;/inventories/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TEAM_ID</td>
+<td>The ID of the team to retrieve inventory from</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>The ID of the inventory to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='get-columns-from-specific-inventory'>Get Columns from specific inventory</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams/1/inventories/1/columns"</span>
+  -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_columns"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text Column"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"data_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"inventory_list_items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_columns"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File Column"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"data_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"inventory_list_items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_columns"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"List Column"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"data_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"inventory_list_items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_list_items"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_list_items"</span><span class="w">
+                      </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"included"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_list_items"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASF"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_list_items"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GDD"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/columns?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/columns?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/columns?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves columns from specific inventory.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://my-test.scinote.net/api/v1/teams/&lt;TEAM_ID&gt;/inventories/&lt;INVENTORY_ID&gt;/columns</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TEAM_ID</td>
+<td>The ID of the team to retrieve inventory from</td>
+</tr>
+<tr>
+<td>INVENTORY_ID</td>
+<td>The ID of the inventory to retrieve columns from</td>
+</tr>
+</tbody></table>
+<h2 id='get-items-from-specific-inventory'>Get Items from specific inventory</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://my-test.scinote.net/api/v1/teams/1/inventories/1/items"</span>
+  -H <span class="s2">"Authorization: Bearer qwerty123456..."</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_items"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHH/1"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"inventory_cells"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_cells"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_items"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHH/2"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"inventory_cells"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_cells"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"included"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_cells"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASF"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"inventory_list_item_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"column_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inventory_cells"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VEGB"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"column_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/items?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/items?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://my-test.scinote.net/api/v1/teams/1/inventories/1/items?page%5Bnumber%5D=1&amp;page%5Bsize%5D=10"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves items from specific inventory.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://my-test.scinote.net/api/v1/teams/&lt;TEAM_ID&gt;/inventories/&lt;INVENTORY_ID&gt;/items</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>TEAM_ID</td>
+<td>The ID of the team to retrieve inventory from</td>
+</tr>
+<tr>
+<td>INVENTORY_ID</td>
+<td>The ID of the inventory to retrieve items from</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
